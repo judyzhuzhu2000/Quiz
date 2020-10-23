@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&family=Raleway:wght@500&display=swap');
+:root {
+    --main-bg-color: white;
+    --main-font-color: #1a1a1a;
+    --main-theme-color: rgb(243,168,47);
+    --light-white: #f5f5f5;
+    --light-gray: #ccc;
+    --light-black: #282a39;
+    --container-width: 768px;
+    --font-body-stack: Raleway,charcoal, sans-serif;
+    --font-heading-stack: "PT Serif", sans-serif;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: var(--container-width);
+    margin-right: auto;/*center*/
+    margin-left: auto;
+}
+.button {
+    padding: 1rem 3.5rem;
+    text-transform: uppercase;
+    transition: 0.3s all ease;
+    border: 1px solid #eee;
+    outline: 0;
+    opacity: 0.9;
+    font-weight: bold;
+}
+.button:hover {
+    opacity: 1;
+    background-color: var(--light-black);
+    color: white;
+}
+.button--border {
+    border: 1px solid var(--light-black);
+}
+.jabquiz {
+    padding: 2rem 2.5rem;
+}
+.jabquiz__question-box {
+    text-align: center;
+}
+.jabquiz__question {
+    font-family: var(--font-heading-stack);
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    padding: 1rem 4rem;
+    color: var(--main-font-color);
+}
+.jabquiz__tracker {
+    font-family: var(--font-body-stack);
+    padding: 1rem;
+    color: var(--light-black);
+}
+.progress {
+    border-radius: 4px;
+    margin: 2rem auto;
+    width: 50%;
+    background-color: var(--light-white);
+}
+.progress__inner {
+    height: 10px;
+    background-color: var(--main-theme-color);
+    width: 3px;
+}
+.jabquiz__tagline {
+    text-emphasis: center;
+    font-family: var(--font-body-stack);
+    color: var(--light-gray);
+    font-size: 1.4rem;
+}
+
+.jabquiz__choices {
+    list-style-type: none;
+    margin: 1rem auto;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.jabquiz__choice {
+    min-width: 300px;
+    border-radius: 4px;
+    display: block;
+    font-family: sans-serif;
+    background-color: var(--light-white);
+    margin: 0.5rem auto;
+    color: var(--light-black);
+    letter-spacing: 1.2px;
+    font-size: 0.86rem;
+}
+.jabquiz__label {
+    padding: 2rem 2rem;
+    display: flex;/*all flexible items be the same length*/
+    align-items: center;
+}
+.jabquiz__choices input {
+    opacity: 0; /*radio button gone*/
+}
+.jabquiz__choices input:checked + label {
+    color: var(--main-theme-color);
+}
+.jabquiz__choices input:checked + label i {
+    background-image: url('../images/circle-filled.svg');
+}
+.jabquiz__choices label i {
+    background: url('../images/circle-outline.svg');
+    background-size: 40px;
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    position: relative;
+    top: 1px;
+    margin-right: 10px;
+}
+.jabquiz__footer {
+    padding：2rem;
+    display: flex;
+    flex-direction: column;
+}
